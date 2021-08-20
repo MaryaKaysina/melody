@@ -105,7 +105,7 @@ html {
   color: #3596F5;
 }
 .main__title {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-weight: normal;
   font-size: 37px;
   line-height: 44px;
@@ -154,7 +154,7 @@ path.current-floor {
   stroke: #3596F5;
 }
 .main__counter {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 124px;
   color: #635854;
 }
@@ -231,3 +231,94 @@ path.current-floor {
 .footer__offer {
   margin-right: 20px;
 }
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .3s ease-in-out;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal__dialog {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  max-width: 1000px;
+  min-height: 565px;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+  transition-delay: .3s;
+}
+.is-open .modal__dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal__img {
+  padding: 50px 0 58px;
+  width: 60%;
+  background: #EBEBEB;
+  text-align: center;
+}
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+.modal__info {
+  padding: 50px 46px;
+  width: 40%;
+}
+.modal__floor {
+  margin-top: 55px;
+  margin-bottom: 56px;
+}
+.modal__flat:not(:last-child) {
+  margin-bottom: 10px;
+}
+.modal__link {
+  transition: color .3s ease-in-out, text-decoration .3s ease-in-out;
+}
+.modal__link:hover {
+  text-decoration: underline;
+  color: #3596F5;
+}
+.modal__alert {
+  width: 80%;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+}
+.modal__close {
+  position: absolute;
+  right: 27px;
+  top: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.modal__floors path {
+  opacity: 0;
+  cursor: pointer;
+}
+.modal__floors path:hover {
+  opacity: 1;
+}
+
+
