@@ -91,6 +91,10 @@ html {
   line-height: 16px;
   text-align: end;
 }
+.header__text {
+  display: inline-block;
+  margin-bottom: 4px;
+}
 .header__call {
   font-weight: bold;
   font-size: 17px;
@@ -107,6 +111,9 @@ html {
   line-height: 44px;
   color: #635854;
 }
+.main {
+  margin-bottom: 95px;
+}
 .container--main {
   display: flex;
 }
@@ -115,6 +122,9 @@ html {
   cursor: pointer;
 }
 .main__home path:hover {
+  opacity: 1;
+}
+path.current-floor {
   opacity: 1;
 }
 .main__info {
@@ -163,4 +173,61 @@ html {
   background: #fff;
   color: #3596F5;
   border-color: #3596F5;
+}
+.footer {
+  padding: 50px 0 56px;
+  border-top: 4px solid #3596F5;
+  background: #D7D7D7;
+  color: #635854;
+}
+.container--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__wrap:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo {
+  margin-right: 37px;
+}
+.footer__phone {
+  margin-right: 59px;
+}
+.footer__text {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.footer__call {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  transition: color .3s ease-in-out;
+}
+.footer__call:hover {
+  color: #3596F5;
+}
+.footer__link:not(:last-child) {
+  margin-right: 15px;
+}
+.footer__link path {
+  transition: fill .3s ease-in-out
+}
+.footer__link:hover path {
+  fill: #3596F5;
+}
+.footer__policy,
+.footer__offer,
+.footer__contacts {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
+}
+.footer__policy,
+.footer__offer {
+  margin-right: 20px;
 }
