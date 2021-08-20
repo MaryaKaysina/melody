@@ -320,5 +320,9 @@ path.current-floor {
 .modal__floors path:hover {
   opacity: 1;
 }
+.current-flat {
+  text-decoration: underline;
+  color: #3596F5;
+}
 
 
